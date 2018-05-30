@@ -63,5 +63,15 @@
       "pipe": true,
       "service": true
     }
-  }
+  },
+  "styles": [
+  "../node_modules/font-awesome/css/font-awesome.css",
+  "../node_modules/angular-bootstrap-md/css/bootstrap.css",
+  "../node_modules/angular-bootstrap-md/css/mdb.css",
+  "styles.css"
+  ],
+  "scripts": [
+    "../node_modules/chart.js/dist/Chart.js",
+    "../node_modules/hammerjs/hammer.min.js"
+  ]
 }
