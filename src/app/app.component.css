@@ -1,0 +1,33 @@
+.header-height {
+    height: 100px;
+    justify-content: center;
+    position: sticky;
+    opacity: 20%;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.icon {
+    padding: 0 14px;
+}
+
+.card-width {
+    max-width: 140px;
+}
+
+mat-icon{
+    font-family: 'Material Icons' !important;
+}
+
+#background {
+    position: absolute; 
+    margin: auto; 
+    top: 0; 
+    left: 0; 
+      
+    /* Preserve aspet ratio */
+    width: 100%;
+    min-height: 100%;
+  }

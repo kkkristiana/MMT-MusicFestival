@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MatToolbarModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     HttpModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    MatToolbarModule,
+    MatIconModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
