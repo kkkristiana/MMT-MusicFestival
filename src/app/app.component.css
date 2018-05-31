@@ -31,3 +31,9 @@ mat-icon{
     width: 100%;
     min-height: 100%;
   }
+
+  .video {
+        position: relative;
+        padding: 140px;
+        z-index: 9999;
+  }

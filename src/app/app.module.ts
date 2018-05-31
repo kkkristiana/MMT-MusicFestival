@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MatToolbarModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
+import { YoutubePlayerModule } from 'ngx-youtube-player';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,12 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MDBBootstrapModule.forRoot(),
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    YoutubePlayerModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
+

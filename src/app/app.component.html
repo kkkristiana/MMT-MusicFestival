@@ -25,3 +25,12 @@
         </span>
     </mat-toolbar-row>
   </mat-toolbar>
+<div class="video">
+  <youtube-player
+  [videoId]="id"
+  [width]="700"
+  [height]="500"
+  (ready)="savePlayer($event)"
+  (change)="onStateChange($event)"
+></youtube-player>
+</div>
