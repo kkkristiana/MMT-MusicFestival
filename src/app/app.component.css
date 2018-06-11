@@ -4,8 +4,8 @@
     position: sticky;
     position: -webkit-sticky;
     top: 0px;
-    opacity: 20%;
-    z-index: 999999999999;
+    background-color:rgba(0,192,222,1.0);
+    z-index: 999999;
 }
 
 .spacer {
