@@ -2,7 +2,10 @@
     height: 100px;
     justify-content: center;
     position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
     opacity: 20%;
+    z-index: 999999999999;
 }
 
 .spacer {
@@ -11,6 +14,10 @@
 
 .icon {
     padding: 0 14px;
+}
+
+agm-map {
+    height: 300px;
 }
 
 .card-width {
@@ -29,11 +36,12 @@ mat-icon{
       
     /* Preserve aspet ratio */
     width: 100%;
-    min-height: 100%;
-  }
+    height: auto;
+    z-index: -1;
+}
 
   .video {
-        position: relative;
-        padding: 140px;
-        z-index: 9999;
+    margin: 0px auto;
+    float: none;
+    display: table;
   }

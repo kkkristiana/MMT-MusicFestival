@@ -1,0 +1,9 @@
+.map-size {
+    width: 50%;
+    height: 300px;
+}
+
+agm-map {
+    z-index: 99999999999;
+    height: 300px;
+}

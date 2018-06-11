@@ -1,11 +1,11 @@
-<head><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"></head>
+<html><head><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
 <img src="http://bsf.hmsu.org/wp-content/uploads/2017/08/cropped-varvara-gopro.jpg" id="background" alt="">
 <mat-toolbar color="primary" class="header-height">
     <mat-toolbar-row>
         <button mat-button>
-        <mat-card class="card-width">
-        <img mat-card-image class="card-width" src="http://bsf.hmsu.org/wp-content/uploads/2017/08/cropped-bsf-logo-1.png" alt="Photo of a Shiba Inu">
-        </mat-card>
+        <img mat-card-image class="card-width" src="http://bsf.hmsu.org/wp-content/uploads/2017/08/cropped-bsf-logo-1.png">
         </button>
       
       <button mat-button>Line-up</button>
@@ -25,12 +25,13 @@
         </span>
     </mat-toolbar-row>
   </mat-toolbar>
-<div class="video">
-  <youtube-player
+  <app-map></app-map>
+  <youtube-player class="video"
   [videoId]="id"
   [width]="700"
   [height]="500"
   (ready)="savePlayer($event)"
   (change)="onStateChange($event)"
 ></youtube-player>
-</div>
+</body>
+</html>
