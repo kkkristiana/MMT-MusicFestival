@@ -10,10 +10,14 @@ import { MatToolbarModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { YoutubePlayerModule } from 'ngx-youtube-player';
 import { MapModule } from './map/map.module';
+import { LineupComponent} from './lineup/lineup.component';
+import { DndModule } from 'ng2-dnd';
+import { MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LineupComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,12 @@ import { MapModule } from './map/map.module';
     MatToolbarModule,
     MatIconModule,
     YoutubePlayerModule,
-    MapModule
+    MapModule,
+    DndModule.forRoot(),
+    MatListModule
+  ],
+  exports: [
+    LineupComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

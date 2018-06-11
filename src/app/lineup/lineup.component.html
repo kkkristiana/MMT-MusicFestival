@@ -1,0 +1,6 @@
+<mat-list class="items">
+  <mat-list-item dnd-draggable [dragEnabled]="true" *ngFor="let entry of programmeEntries; let i = index;">
+    <span class="badge">{{entry.hours}}</span> {{ entry.name}}
+  </mat-list-item>
+  </mat-list>
+
