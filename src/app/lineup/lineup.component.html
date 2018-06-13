@@ -1,6 +1,15 @@
-<mat-list class="items">
-  <mat-list-item dnd-draggable [dragEnabled]="true" *ngFor="let entry of programmeEntries; let i = index;">
+<div layout-align='center center' layout-fill layout='column'>
+  <div>
+<mat-list>
+  <mat-list-item *ngFor="let entry of programmeEntries;" dnd-draggable [dragEnabled]="true" [dragData]="entry">
     <span class="badge">{{entry.hours}}</span> {{ entry.name}}
   </mat-list-item>
   </mat-list>
-
+</div>
+<div mat-list dnd-droppable class="panel panel-info" (onDropSuccess)="addToPersonalProgramme($event)">
+    <div class="panel-heading">Personal Programme</div>
+    <div class="panel-body">
+        <div mat-list-item *ngFor="let entry of personalProgramme">{{entry}}</div>
+    </div>
+</div>
+</div>

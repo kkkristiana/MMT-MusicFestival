@@ -8,20 +8,18 @@
     z-index: 999999;
 }
 
+.footer {
+    height: 70px;
+    z-index: 999999;
+    background-color: rgba(0,192,222,1.0);
+}
+
 .spacer {
     flex: 1 1 auto;
 }
 
 .icon {
     padding: 0 14px;
-}
-
-agm-map {
-    height: 300px;
-}
-
-.card-width {
-    max-width: 140px;
 }
 
 mat-icon{
@@ -40,8 +38,8 @@ mat-icon{
     z-index: -1;
 }
 
-  .video {
-    margin: 0px auto;
-    float: none;
-    display: table;
+.card-width {
+    max-width: 140px;
+    outline: none !important;
+    border: 0 !important;
   }

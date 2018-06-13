@@ -5,35 +5,30 @@
 <mat-toolbar color="primary" class="header-height">
     <mat-toolbar-row>
         <button mat-button>
-        <img mat-card-image class="card-width" src="http://bsf.hmsu.org/wp-content/uploads/2017/08/cropped-bsf-logo-1.png">
+        <img mat-card-image routerLink="/" class="card-width" src="http://bsf.hmsu.org/wp-content/uploads/2017/08/cropped-bsf-logo-1.png">
         </button>
       
-      <button mat-button>Line-up</button>
+      <button mat-button routerLink="/lineup">Line-up</button>
+      <button mat-button routerLink="/map">Location</button>
       <button mat-button>Tickets</button>
-      <button mat-button>Artists</button>
-      <button mat-button>About</button>
-      <button mat-button>Services</button>
-      <button mat-button>Contact</button>
-
+      <button mat-button routerLink="/artists">Artists</button>
+      <button mat-button routerLink="/gallery">Gallery</button>
+      <button mat-button routerLink="/mixcontest">Mix Contest</button>
       <span class="spacer"></span>
       <span class="fa-stack fa-1x" class="icon">
       <i class="fab fa-facebook-f"></i>
         </span>
-        
-      <span class="fa-stack fa-1x" class="icon">
-      <i class="fab fa-twitter"></i>
-        </span>
+        <span class="fa-stack fa-1x" class="icon">
+          <i class="fab fa-twitter"></i>
+            </span>
+
     </mat-toolbar-row>
   </mat-toolbar>
-   <app-map></app-map>
-  <youtube-player class="video"
-  [videoId]="id"
-  [width]="700"
-  [height]="500"
-  (ready)="savePlayer($event)"
-  (change)="onStateChange($event)"
-></youtube-player>
 
-<app-lineup></app-lineup>
+   <!-- <app-map></app-map> -->
+
+<!-- <app-lineup></app-lineup> -->
+<router-outlet></router-outlet>
+<!-- <app-artists></app-artists> -->
 </body>
 </html>

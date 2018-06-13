@@ -3,6 +3,7 @@ import { MatButton } from '@angular/material';
 import { MatToolbar } from '@angular/material';
 import { MatIcon } from '@angular/material';
 import { MapComponent } from './map/map.component'
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +11,4 @@ import { MapComponent } from './map/map.component'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private ytEvent;
-
-  player: YT.Player;
-  private id = 'EKRGpegFG5w';
-
-  savePlayer(player) {
-    this.player = player;
-    console.log('player instance', player);
-  }
-  onStateChange(event) {
-    console.log('player state', event.data);
-  }
 }

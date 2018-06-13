@@ -1,0 +1,14 @@
+mat-list-item {
+    background-color: white;
+    width: 60%;
+    height: 40px;
+    float: center;
+}
+
+mat-list {
+    width: 60%;
+    overflow: hidden; 
+    position: relative;
+    padding: 12px;
+    margin: 12px;
+}

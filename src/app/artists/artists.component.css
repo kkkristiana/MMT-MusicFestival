@@ -1,0 +1,8 @@
+.artist-card {
+  max-width: 80%;
+}
+
+.example-header-image {
+  background-image: url('http://www.darkdnb.com/img/artists/the-prototypes.jpg');
+  background-size: cover;
+}

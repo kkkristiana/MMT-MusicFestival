@@ -11,11 +11,30 @@ import { MatList, MatListItem } from '@angular/material';
 export class LineupComponent implements OnInit {
 
   programmeEntries: ProgrammeEntry[];
+  personalProgramme: ProgrammeEntry[];
 
   constructor() { }
 
   ngOnInit() {
     this.programmeEntries = PROGRAMME_ENTRIES;
   }
+
+  addToPersonalProgramme($event: any) {
+    const newEntry: ProgrammeEntry = $event.dragData;
+    let found = false
+    // tslint:disable-next-line:forin
+    for (const indx in this.personalProgramme) {
+      const entry: ProgrammeEntry = this.personalProgramme[indx];
+      if (entry.id === newEntry.id) {
+        found = true;
+        break;
+      }
+     }
+
+  if (!found) {
+    this.personalProgramme.push(new ProgrammeEntry(newEntry.id, newEntry.name, newEntry.hours, newEntry.description));
+    console.log('Added');
+  }
+}
 
 }

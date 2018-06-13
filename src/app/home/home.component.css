@@ -1,0 +1,13 @@
+
+  .video {
+    margin: 0px auto;
+    float: none;
+    display: table;
+    padding: 20px;
+  }
+
+  .info-card {
+      padding: 30px;
+      background-color: rgba(255, 255, 255, .0);
+      color: rgba(255,255,255,1);
+  }
