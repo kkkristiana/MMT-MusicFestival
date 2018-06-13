@@ -1,5 +1,8 @@
 // This file includes polyfills needed by Angular and is loaded before the app.
 // You can add your own extra polyfills to this file.
+import 'web-animations-js/web-animations.min';
+import 'hammerjs/hammer';
+
 import 'core-js/es6/symbol';
 import 'core-js/es6/object';
 import 'core-js/es6/function';
@@ -27,7 +30,7 @@ import 'zone.js/dist/zone';
 
 // Animations
 // Needed for: All but Chrome and Firefox, Not supported in IE9
-// import 'web-animations-js';
+import 'web-animations-js';
 
 // Date, currency, decimal and percent pipes
 // Needed for: All but Chrome, Firefox, Edge, IE11 and Safari 10

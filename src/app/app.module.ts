@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MixContestComponent } from './mix-contest/mix-contest.component';
 import { HomeComponent } from './home/home.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
+import { Angular2ImageGalleryModule } from 'angular2-image-gallery';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
     DndModule.forRoot(),
     MatListModule,
     MatCardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Angular2ImageGalleryModule
     ],
   exports: [
     LineupComponent,
