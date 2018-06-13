@@ -6,6 +6,7 @@ import { LineupComponent } from '../lineup/lineup.component';
 import { MixContestComponent } from '../mix-contest/mix-contest.component';
 import { HomeComponent } from '../home/home.component';
 import { ImageGalleryComponent } from '../image-gallery/image-gallery.component';
+import { TicketsInfoComponent } from '../tickets-info/tickets-info.component';
 
 @NgModule({
   imports: [ RouterModule.forRoot([
@@ -37,6 +38,10 @@ import { ImageGalleryComponent } from '../image-gallery/image-gallery.component'
   {
     path: 'gallery',
     component: ImageGalleryComponent
+  },
+  {
+     path: 'tickets',
+     component: TicketsInfoComponent
   }
 ])
   ],

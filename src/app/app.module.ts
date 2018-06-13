@@ -19,6 +19,7 @@ import { MixContestComponent } from './mix-contest/mix-contest.component';
 import { HomeComponent } from './home/home.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { Angular2ImageGalleryModule } from 'angular2-image-gallery';
+import { TicketsInfoComponent } from './tickets-info/tickets-info.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { Angular2ImageGalleryModule } from 'angular2-image-gallery';
     ArtistsComponent,
     MixContestComponent,
     HomeComponent,
-    ImageGalleryComponent
+    ImageGalleryComponent,
+    TicketsInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { Angular2ImageGalleryModule } from 'angular2-image-gallery';
     ArtistsComponent,
     MixContestComponent,
     HomeComponent,
-    ImageGalleryComponent
+    ImageGalleryComponent,
+    TicketsInfoComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

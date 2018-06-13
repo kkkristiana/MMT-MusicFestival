@@ -1,0 +1,10 @@
+.info-card {
+    /* background-color: rgba(255, 255, 255, .0);
+    color: rgba(255,255,255,1); */
+    white-space: pre-line;
+}
+
+.buy-button {
+    background-color: rgba(0,192,222,1.0);
+    color: white;
+}
