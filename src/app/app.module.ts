@@ -20,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { Angular2ImageGalleryModule } from 'angular2-image-gallery';
 import { TicketsInfoComponent } from './tickets-info/tickets-info.component';
+import { FileSelectDirective } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TicketsInfoComponent } from './tickets-info/tickets-info.component';
     MixContestComponent,
     HomeComponent,
     ImageGalleryComponent,
-    TicketsInfoComponent
+    TicketsInfoComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,

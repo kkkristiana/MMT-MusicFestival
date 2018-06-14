@@ -13,6 +13,8 @@ export class LineupComponent implements OnInit {
   programmeEntries: ProgrammeEntry[];
   personalProgramme: ProgrammeEntry[];
 
+  dropTableTitle = '--> Drop entries here to build personal programme <--';
+
   constructor() { }
 
   ngOnInit() {
@@ -32,6 +34,7 @@ export class LineupComponent implements OnInit {
      }
 
   if (!found) {
+    this.dropTableTitle = 'Your personal line-up';
     this.personalProgramme.push(new ProgrammeEntry(newEntry.id, newEntry.name, newEntry.hours, newEntry.description));
     console.log('Added');
   }

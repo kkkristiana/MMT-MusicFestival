@@ -1,14 +1,25 @@
 mat-list-item {
-    background-color: white;
-    width: 60%;
+    background-color: rgba(58, 41, 170, 0.7);
+    width: 70%;
     height: 40px;
     float: center;
+    color: white;
 }
 
 mat-list {
-    width: 60%;
+    width: 70%;
     overflow: hidden; 
     position: relative;
     padding: 12px;
     margin: 12px;
+    color: white;
+}
+
+.badge {
+    padding: 10px;
+}
+
+.toolbar {
+    background-color: rgba(0,192,222,1.0);
+    color: white;
 }
