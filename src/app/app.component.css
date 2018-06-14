@@ -1,10 +1,18 @@
-.header-height {
-    height: 100px;
+.menu-header {
+    height: 70px;
     justify-content: center;
     position: sticky;
     position: -webkit-sticky;
     top: 0px;
     background-color:rgba(0,192,222,1.0);
+    z-index: 999999;
+}
+
+.img-header {
+    height: 130px;
+    justify-content: center;
+    top: 10px;
+    background-color:rgba(255, 191, 2, 0.8);
     z-index: 999999;
 }
 
@@ -39,7 +47,10 @@ mat-icon{
 }
 
 .card-width {
-    max-width: 140px;
+    max-width: 150px;
     outline: none !important;
     border: 0 !important;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
   }
