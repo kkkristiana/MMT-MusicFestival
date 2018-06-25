@@ -10,10 +10,10 @@ import { MatToolbarModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { YoutubePlayerModule } from 'ngx-youtube-player';
 import { MapModule } from './map/map.module';
-import { LineupComponent} from './lineup/lineup.component';
+import { LineupComponent } from './lineup/lineup.component';
 import { DndModule } from 'ng2-dnd';
 import { MatListModule } from '@angular/material';
-import { ArtistsComponent} from './artists/artists.component';
+import { ArtistsComponent } from './artists/artists.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MixContestComponent } from './mix-contest/mix-contest.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +21,8 @@ import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { Angular2ImageGalleryModule } from 'angular2-image-gallery';
 import { TicketsInfoComponent } from './tickets-info/tickets-info.component';
 import { FileSelectDirective } from 'ng2-file-upload';
+import { ArtistsService } from './artists/artists.service';
+import { LineupService } from './lineup/lineup.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,7 @@ import { FileSelectDirective } from 'ng2-file-upload';
     MatCardModule,
     AppRoutingModule,
     Angular2ImageGalleryModule
-    ],
+  ],
   exports: [
     LineupComponent,
     ArtistsComponent,
@@ -58,8 +60,10 @@ import { FileSelectDirective } from 'ng2-file-upload';
     ImageGalleryComponent,
     TicketsInfoComponent
   ],
-  providers: [],
+  providers: [
+    ArtistsService, LineupService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
 

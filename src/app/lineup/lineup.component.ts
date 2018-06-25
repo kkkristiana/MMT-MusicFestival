@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import ProgrammeEntry from './lineup.model';
-import { PROGRAMME_ENTRIES } from './lineup-mock';
-import { MatList, MatListItem } from '@angular/material';
+import { LineupService } from './lineup.service';
 
 @Component({
   selector: 'app-lineup',
@@ -15,10 +14,15 @@ export class LineupComponent implements OnInit {
 
   dropTableTitle = '--> Drop entries here to build personal programme <--';
 
-  constructor() { }
+  constructor(private lineupService: LineupService) { }
 
-  ngOnInit() {
-    this.programmeEntries = PROGRAMME_ENTRIES;
+  async ngOnInit() {
+    let rawData = await this.lineupService.getLineups();
+    this.programmeEntries = rawData.map((data) => {
+      let newProgrammeEntrie = new ProgrammeEntry(data.id, data.name, data.hours);
+
+      return newProgrammeEntrie;
+    })
   }
 
   addToPersonalProgramme($event: any) {
@@ -31,13 +35,13 @@ export class LineupComponent implements OnInit {
         found = true;
         break;
       }
-     }
+    }
 
-  if (!found) {
-    this.dropTableTitle = 'Your personal line-up';
-    this.personalProgramme.push(new ProgrammeEntry(newEntry.id, newEntry.name, newEntry.hours, newEntry.description));
-    console.log('Added');
+    if (!found) {
+      this.dropTableTitle = 'Your personal line-up';
+      this.personalProgramme.push(new ProgrammeEntry(newEntry.id, newEntry.name, newEntry.hours, newEntry.description));
+      console.log('Added');
+    }
   }
-}
 
 }
