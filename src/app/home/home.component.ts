@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { TimerObservable } from 'rxjs/observable/TimerObservable';
+import { timer } from 'rxjs/observable/timer'; // (for rxjs < 6) use 'rxjs/observable/timer'
+import { take } from 'rxjs/operators/take';
+import { map } from 'rxjs/operators/map';
 
 @Component({
   selector: 'app-home',
@@ -6,12 +11,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  private ytEvent;
-
   player: YT.Player;
   private id = 'EKRGpegFG5w';
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
@@ -23,5 +27,4 @@ export class HomeComponent implements OnInit {
   onStateChange(event) {
     console.log('player state', event.data);
   }
-
 }

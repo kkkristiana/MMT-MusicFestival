@@ -23,6 +23,7 @@ import { TicketsInfoComponent } from './tickets-info/tickets-info.component';
 import { FileSelectDirective } from 'ng2-file-upload';
 import { ArtistsService } from './artists/artists.service';
 import { LineupService } from './lineup/lineup.service';
+import { CountdownTimerComponent } from './shared/countdown-timer/countdown-timer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LineupService } from './lineup/lineup.service';
     HomeComponent,
     ImageGalleryComponent,
     TicketsInfoComponent,
-    FileSelectDirective
+    FileSelectDirective,
+    CountdownTimerComponent
   ],
   imports: [
     BrowserModule,
