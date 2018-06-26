@@ -1,38 +1,51 @@
-<html><head><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
 </head>
+
 <body>
-<img src="http://bsf.hmsu.org/wp-content/uploads/2017/08/cropped-varvara-gopro.jpg" id="background" alt="">
-<mat-toolbar color="primary" class="img-header">
+  <img src="http://bsf.hmsu.org/wp-content/uploads/2017/08/cropped-varvara-gopro.jpg" id="background" alt="">
+  <mat-toolbar color="primary" class="img-header">
     <mat-toolbar-row>
-        <button mat-button>
-            <img mat-card-image routerLink="/" class="card-width" src="http://bsf.hmsu.org/wp-content/uploads/2017/08/cropped-bsf-logo-1.png">
-            </button>
-      </mat-toolbar-row>
-      </mat-toolbar>
-<mat-toolbar color="primary" class="menu-header">
+      <button mat-button>
+        <img mat-card-image routerLink="/" class="card-width" src="http://bsf.hmsu.org/wp-content/uploads/2017/08/cropped-bsf-logo-1.png">
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-toolbar color="primary" class="menu-header">
     <mat-toolbar-row>
       <button mat-button routerLink="/tickets">Tickets</button>
       <button mat-button routerLink="/map">Location</button>
       <button mat-button routerLink="/lineup">Line-up</button>
       <button mat-button routerLink="/artists">Artists</button>
       <button mat-button routerLink="/gallery">Gallery</button>
-      <button mat-button routerLink="/mixcontest">Mix Contest</button>
+      <button mat-button routerLink="/mixcontest" *ngIf="currentUser">Mix Contest</button>
       <span class="spacer"></span>
+      <button mat-button routerLink="/login" *ngIf="!currentUser">Login</button>
+      <button mat-button [matMenuTriggerFor]="menu" *ngIf="currentUser">{{currentUser ? currentUser.email : ""}}</button>
+      <mat-menu #menu="matMenu">
+        <button mat-button>
+          <a routerLinkActive="active" (click)="signOut()">Sign out</a>
+        </button>
+      </mat-menu>
       <span (click)="openFB()" class="fa-stack fa-1x" class="icon">
-      <i class="fab fa-facebook-f"></i>
-        </span>
-        <span (click)="openTwitter()" class="fa-stack fa-1x" class="icon">
-          <i class="fab fa-twitter"></i>
-            </span>
+        <i class="fab fa-facebook-f"></i>
+      </span>
+      <span (click)="openTwitter()" class="fa-stack fa-1x" class="icon">
+        <i class="fab fa-twitter"></i>
+      </span>
 
     </mat-toolbar-row>
   </mat-toolbar>
 
-   <!-- <app-map></app-map> -->
+  <!-- <app-map></app-map> -->
 
-<!-- <app-lineup></app-lineup> -->
-<router-outlet></router-outlet>
-<!-- <app-artists></app-artists> -->
-<p style="color: white; text-align: center;">Bass Sea Festival © HMSU 2018</p>
+  <!-- <app-lineup></app-lineup> -->
+  <router-outlet></router-outlet>
+  <!-- <app-artists></app-artists> -->
+  <p style="color: white; text-align: center;">Bass Sea Festival © HMSU 2018</p>
 </body>
+
 </html>

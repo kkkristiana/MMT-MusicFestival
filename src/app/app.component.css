@@ -54,3 +54,7 @@ mat-icon{
     margin: auto;
     padding-top: 20px;
   }
+
+  ::ng-deep .menu-header {
+      z-index: 100 !important;
+  }

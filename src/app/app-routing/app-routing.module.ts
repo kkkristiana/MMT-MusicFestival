@@ -7,45 +7,50 @@ import { MixContestComponent } from '../mix-contest/mix-contest.component';
 import { HomeComponent } from '../home/home.component';
 import { ImageGalleryComponent } from '../image-gallery/image-gallery.component';
 import { TicketsInfoComponent } from '../tickets-info/tickets-info.component';
+import { LoginComponent } from '../login/login.component';
 
 @NgModule({
-  imports: [ RouterModule.forRoot([
-  {
-      path: '',
-      pathMatch: 'full',
-      redirectTo: '/home'
-  },
-  {
-      path: 'home',
-      component: HomeComponent
-  },
-  {
-      path: 'artists',
-      component: ArtistsComponent
-  },
-  {
-      path: 'map',
-      component: MapComponent
-  },
-  {
-      path: 'lineup',
-      component: LineupComponent
-  },
-  {
-    path: 'mixcontest',
-    component: MixContestComponent
-  },
-  {
-    path: 'gallery',
-    component: ImageGalleryComponent
-  },
-  {
-     path: 'tickets',
-     component: TicketsInfoComponent
-  }
-])
-  ],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot([
+        {
+            path: '',
+            pathMatch: 'full',
+            redirectTo: '/home'
+        },
+        {
+            path: 'home',
+            component: HomeComponent
+        },
+        {
+            path: 'artists',
+            component: ArtistsComponent
+        },
+        {
+            path: 'map',
+            component: MapComponent
+        },
+        {
+            path: 'lineup',
+            component: LineupComponent
+        },
+        {
+            path: 'mixcontest',
+            component: MixContestComponent
+        },
+        {
+            path: 'gallery',
+            component: ImageGalleryComponent
+        },
+        {
+            path: 'tickets',
+            component: TicketsInfoComponent
+        },
+        {
+            path: 'login',
+            component: LoginComponent
+        }
+    ])
+    ],
+    exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
 
