@@ -9,6 +9,7 @@ import { ImageGalleryComponent } from '../image-gallery/image-gallery.component'
 import { TicketsInfoComponent } from '../tickets-info/tickets-info.component';
 import { LoginComponent } from '../login/login.component';
 import { RegisterComponent } from '../register/register.component';
+import { ContactFormComponent } from '../contact-form/contact-form.component';
 
 @NgModule({
     imports: [RouterModule.forRoot([
@@ -52,6 +53,10 @@ import { RegisterComponent } from '../register/register.component';
         {
             path: 'register',
             component: RegisterComponent
+        },
+        {
+            path: 'contact-us',
+            component: ContactFormComponent
         }
     ])
     ],

@@ -28,6 +28,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
 import { RegisterService } from './register/register.service';
 import { RegisterComponent } from './register/register.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { RegisterComponent } from './register/register.component';
     FileSelectDirective,
     CountdownTimerComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
