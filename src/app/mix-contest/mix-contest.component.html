@@ -4,7 +4,7 @@
 
                 Make a 45-90 minutes long mix using turntables/players and compete for a place in the Bass Sea Festival lineup.
       </mat-card-content>
-      <input type="file" name="photo" ng2FileSelect [uploader]="uploader" /><button mat-button class="upload-button" type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+      <input id="file-upload" accept=".mp3" (change)="fileUpload($event)"  type="file" name="photo" ng2FileSelect [uploader]="uploader" /><button mat-button class="upload-button" type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
             Upload
       </button>
 </mat-card>

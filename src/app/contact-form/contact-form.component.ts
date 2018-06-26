@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ContactFormComponent implements OnInit {
 	title: string;
 	email: string;
+	comment: string;
 	isLogged: boolean;
+	errorMessage: string;
 
 	constructor() { }
 
@@ -18,5 +20,22 @@ export class ContactFormComponent implements OnInit {
 			this.email = JSON.parse(currentUserRaw).email;
 			this.isLogged = true;
 		}
+	}
+
+	send() {
+		if (!this.title) {
+			this.errorMessage = "Title is required!";
+			return;
+		}
+		if (!this.email) {
+			this.errorMessage = "Email is required!";
+			return;
+		}
+		if (!this.comment) {
+			this.errorMessage = "Comment is required!";
+			return;
+		}
+		alert("Sended");
+		this.errorMessage = undefined;
 	}
 }

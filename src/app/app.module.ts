@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatFormField, MatFormFieldModule, MatInputModule, MatMenuModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatFormField, MatFormFieldModule, MatInputModule, MatMenuModule, MatDialog, MatDialogModule } from '@angular/material';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MatToolbarModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,7 +15,7 @@ import { DndModule } from 'ng2-dnd';
 import { MatListModule } from '@angular/material';
 import { ArtistsComponent } from './artists/artists.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { MixContestComponent } from './mix-contest/mix-contest.component';
+import { MixContestComponent, NotSupportedFileErrorDialog } from './mix-contest/mix-contest.component';
 import { HomeComponent } from './home/home.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { Angular2ImageGalleryModule } from 'angular2-image-gallery';
@@ -43,7 +43,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     CountdownTimerComponent,
     LoginComponent,
     RegisterComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    NotSupportedFileErrorDialog
   ],
   imports: [
     BrowserModule,
@@ -63,7 +64,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     AppRoutingModule,
     Angular2ImageGalleryModule,
     MatInputModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   exports: [
     LineupComponent,
@@ -74,7 +76,14 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     TicketsInfoComponent
   ],
   providers: [
-    ArtistsService, LineupService, LoginService, RegisterService
+    ArtistsService,
+    LineupService,
+    LoginService,
+    RegisterService,
+    MatDialog
+  ],
+  entryComponents: [
+    NotSupportedFileErrorDialog
   ],
   bootstrap: [AppComponent]
 })
