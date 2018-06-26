@@ -26,6 +26,8 @@ import { LineupService } from './lineup/lineup.service';
 import { CountdownTimerComponent } from './shared/countdown-timer/countdown-timer.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
+import { RegisterService } from './register/register.service';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { LoginService } from './login/login.service';
     TicketsInfoComponent,
     FileSelectDirective,
     CountdownTimerComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,7 @@ import { LoginService } from './login/login.service';
     TicketsInfoComponent
   ],
   providers: [
-    ArtistsService, LineupService, LoginService
+    ArtistsService, LineupService, LoginService, RegisterService
   ],
   bootstrap: [AppComponent]
 })

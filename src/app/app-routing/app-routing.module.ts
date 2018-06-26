@@ -8,6 +8,7 @@ import { HomeComponent } from '../home/home.component';
 import { ImageGalleryComponent } from '../image-gallery/image-gallery.component';
 import { TicketsInfoComponent } from '../tickets-info/tickets-info.component';
 import { LoginComponent } from '../login/login.component';
+import { RegisterComponent } from '../register/register.component';
 
 @NgModule({
     imports: [RouterModule.forRoot([
@@ -47,6 +48,10 @@ import { LoginComponent } from '../login/login.component';
         {
             path: 'login',
             component: LoginComponent
+        },
+        {
+            path: 'register',
+            component: RegisterComponent
         }
     ])
     ],
