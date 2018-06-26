@@ -1,0 +1,23 @@
+<div class="container">
+  <mat-card class="log-in">
+    <div *ngIf="errorMessage">
+      <p style="color: red">{{errorMessage}}</p>
+    </div>
+
+    <mat-form-field class="text">
+      <input matInput placeholder="Title" [(ngModel)]="title">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="text">
+      <input matInput placeholder="Email" [(ngModel)]="email" [disabled]="isLogged">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <textarea matInput placeholder="Leave a comment" rows="4"></textarea>
+    </mat-form-field>
+
+    <div style="text-align: right">
+      <button mat-raised-button color="primary" (click)="send()">Send</button>
+    </div>
+  </mat-card>
+</div>

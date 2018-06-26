@@ -1,0 +1,20 @@
+<div class="example-container">
+	<mat-card class="log-in">
+		<div *ngIf="errorMessage">
+			<p style="color: red">{{errorMessage}}</p>
+		</div>
+
+		<mat-form-field>
+			<input matInput placeholder="Email" [(ngModel)]="email">
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" [(ngModel)]="password">
+			<mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+		</mat-form-field>
+
+		<div style="text-align: right">
+			<button mat-raised-button color="primary" (click)="login()">Login</button>
+		</div>
+	</mat-card>
+</div>

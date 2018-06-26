@@ -1,0 +1,44 @@
+.log-in {
+    margin: 10px auto;
+    width: 448px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card {
+    width: 400px;
+}
+
+.mat-logged-users {
+    margin: 0px 20px;
+    padding: 0px;
+    width: 160px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.mat-logged-users span {
+    margin: 10px 0px;
+    display: block;
+}
+
+.mat-logged-users-container {
+    margin: 5px auto;
+}
+
+.selected-card-user {
+    background-color: #3f51b5;
+    color: white;
+}
+
+.remove-user {
+    position: absolute;
+    left: -18px;
+    top: -10px;
+    float: left;
+    color: black;
+    font-size: 35px;
+}
