@@ -14,6 +14,8 @@ export class LineupService {
         { id: '3', name: 'targy', hours: '21:00-22:00' },
         { id: '4', name: 'Mocks', hours: '22:00-23:00' },
         { id: '5', name: 'Konspirator', hours: '23:00-24:00' },
+        { id: '6', name: 'Mocks-2', hours: '22:00-23:00' },
+        { id: '7', name: 'Konspirator-2', hours: '23:00-24:00' },
       ]);
     })
   }
