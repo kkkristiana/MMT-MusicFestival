@@ -1,18 +1,19 @@
 <div layout-align='center center' layout-fill layout='column'>
-    <mat-card style="background-color: rgba(0, 110, 140, 0.7);">
-  <div>
-<mat-list>
-  <mat-list-item style="color: white" *ngFor="let entry of programmeEntries;" dnd-draggable [dragEnabled]="true" [dragData]="entry">
-    <span class="badge">{{entry.hours}}</span> {{ entry.name}}
-  </mat-list-item>
-  </mat-list>
-</div>
-<mat-list dnd-droppable class="panel panel-info" (onDropSuccess)="addToPersonalProgramme($event)" *ngIf='isLogged'>
-    <div class="panel-heading"><mat-toolbar class="toolbar">{{ dropTableTitle }}</mat-toolbar>
+  <mat-card style="background-color: rgba(0, 110, 140, 0.7);">
+    <div>
+      <mat-list>
+        <mat-list-item style="color: white" *ngFor="let entry of programmeEntries;" dnd-draggable [dragEnabled]="true" [dragData]="entry">
+          <span class="badge">{{entry.hours}}</span> {{ entry.name}}
+        </mat-list-item>
+      </mat-list>
     </div>
-    <div class="panel-body">
-        <mat-list-item *ngFor="let entry of personalProgramme;">{{entry}}</mat-list-item>
-    </div>
+    <mat-list dnd-droppable class="panel panel-info" (onDropSuccess)="addToPersonalProgramme($event)" *ngIf='isLogged'>
+      <div class="panel-heading">
+        <mat-toolbar class="toolbar">{{ dropTableTitle }}</mat-toolbar>
+      </div>
+      <div class="panel-body">
+        <mat-list-item *ngFor="let entry of personalProgramme;"><span class="badge">{{entry.hours}}</span> {{ entry.name}}</mat-list-item>
+      </div>
     </mat-list>
   </mat-card>
 </div>

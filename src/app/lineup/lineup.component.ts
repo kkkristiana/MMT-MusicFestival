@@ -10,23 +10,33 @@ import { LineupService } from './lineup.service';
 export class LineupComponent implements OnInit {
 
   isLogged: boolean;
-	email: string;
+  email: string;
 
   programmeEntries: ProgrammeEntry[];
   personalProgramme: ProgrammeEntry[];
 
   dropTableTitle = '--> Drop entries here to build personal programme <--';
 
-  constructor(private lineupService: LineupService) { }
+  constructor(private lineupService: LineupService) {
+    this.personalProgramme = [];
+  }
 
   async ngOnInit() {
     let currentUserRaw = localStorage.getItem('currentUser');
-		if (currentUserRaw) {
-			this.email = JSON.parse(currentUserRaw).email;
-			this.isLogged = true;
-		}
+    if (currentUserRaw) {
+      this.email = JSON.parse(currentUserRaw).email;
+      this.isLogged = true;
+    }
 
     let rawData = await this.lineupService.getLineups();
+    // this.personalProgramme = rawData.map((data) => {
+    //   let newProgrammeEntrie = new ProgrammeEntry(data.id, data.name, data.hours);
+
+    //   return newProgrammeEntrie;
+    // });
+
+    //wrong
+    let rawData2 = await this.lineupService.getLineups();
     this.programmeEntries = rawData.map((data) => {
       let newProgrammeEntrie = new ProgrammeEntry(data.id, data.name, data.hours);
 
@@ -37,21 +47,25 @@ export class LineupComponent implements OnInit {
   addToPersonalProgramme($event: any) {
     debugger;
     const newEntry: ProgrammeEntry = $event.dragData;
-    let found = false
-    // tslint:disable-next-line:forin
-    for (const indx in this.programmeEntries) {
-      const entry: ProgrammeEntry = this.programmeEntries[indx];
-      if (entry.id === newEntry.id) {
-        found = true;
-        break;
-      }
-    }
 
-    if (!found) {
-      this.dropTableTitle = 'Your personal line-up';
-      this.personalProgramme.push(new ProgrammeEntry(newEntry.id, newEntry.name, newEntry.hours, newEntry.description));
-      console.log('Added');
+    if (this.personalProgramme.filter(p => p.id == newEntry.id).length == 0) {
+      this.personalProgramme.push(newEntry);
     }
+    // let found = false;
+    // // tslint:disable-next-line:forin
+    // for (const indx in this.programmeEntries) {
+    //   const entry: ProgrammeEntry = this.programmeEntries[indx];
+    //   if (entry.id === newEntry.id) {
+    //     found = true;
+    //     break;
+    //   }
+    // }
+
+    // debugger;
+    // if (!found) {
+    //   this.dropTableTitle = 'Your personal line-up';
+    //   this.personalProgramme.push(new ProgrammeEntry(newEntry.id, newEntry.name, newEntry.hours, newEntry.description));
+    //   console.log('Added');
+    // }
   }
-
 }
